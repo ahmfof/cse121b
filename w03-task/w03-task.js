@@ -76,11 +76,3 @@ document.querySelector('#multiplied').textContent = numbers.map(number => number
 /* Output Sum of Multiplied by 2 Array */
 fofana = sumOfMultiplied;
 document.querySelector('#sumOfMultiplied').textContent = numbers.map(number => number * 2).reduce((sum, number) => sum + number, 0);
-
-
-
-
-
-
-
-  
