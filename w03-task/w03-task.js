@@ -8,8 +8,8 @@ function add(number1, number2) {
     return number1 + number2;
 }
 function addNumbers() {
-    let addend1 = parseInt(document.querySelector('#addend1').value);
-    let addend2 = parseInt(document.querySelector('#addend2').value);
+    let addend1 = parseInt(document.querySelector('#add1').value);
+    let addend2 = parseInt(document.querySelector('#add2').value);
     let result = add(addend1, addend2);
     document.querySelector('#sum').value = result;
 }
@@ -20,8 +20,8 @@ const subtract = function (number1, number2) {
     return number1 - number2;
 }
 const subtractNumbers = function() {
-    let minuend = parseInt(document.querySelector('#minuend').value);
-    let subtrahend = parseInt(document.querySelector('#subtrahend').value);
+    let minuend = parseInt(document.querySelector('#subtract1').value);
+    let subtrahend = parseInt(document.querySelector('#subtract2').value);
     let result = subtract(minuend, subtrahend);
     document.querySelector('#difference').value = result;
 }
@@ -65,7 +65,7 @@ document.querySelector('#array').textContent = numbers;
 document.querySelector('#odds').textContent = numbers.filter(number => number % 2);
 
 /* Output Evens Only Array */
-document.querySelector('#Evens').textContent = numbers.filter(number => number % 2===0);
+document.querySelector('#evens').textContent = numbers.filter(number => number % 2===0);
 
 /* Output Sum of Org. Array */
 document.querySelector('#sumOfArray').textContent = numbers.reduce((sum, number) => sum + number, 0);
@@ -74,5 +74,5 @@ document.querySelector('#sumOfArray').textContent = numbers.reduce((sum, number)
 document.querySelector('#multiplied').textContent = numbers.map(number => number * 2);
 
 /* Output Sum of Multiplied by 2 Array */
-fofana = sumOfMultiplied;
+
 document.querySelector('#sumOfMultiplied').textContent = numbers.map(number => number * 2).reduce((sum, number) => sum + number, 0);

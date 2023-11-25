@@ -4,35 +4,37 @@
 
 // /* Step 2 - Variables */
 
-// const fullName = 'Ahmed Fofana';
-// let currentYear = new Date().getFullYear(); // Use this to get the current year
-// let profilePicture = 'images/me.jpeg';
 
 // /* Step 3 - Element Variables */
-// const nameElement = document.getElementById('Ahmed Fofana'); // Define nameElement
-// const yearElement = document.getElementById('years').innerHTML =currentYear; // Define yearElement
-// const foodElement = document.getElementById('food');
+
 
 // /* Step 4 - Adding Content */
 
-// nameElement.innerHTML = `<strong>${fullName}</strong>`;
-// yearElement.textContent = currentYear;
-// (document.getElementById('image')).setAttribute('src', profilePicture);
+
 
 // /* Step 5 - Array */
-// let favFood1;
-// let favfood2;
-// let favoriteFood;
-// favFood1 = [" Tacos", " Sushi", " Hamburgers"];
-// document.getElementById("food").innerHTML = favFood1;
-// favfood2 = " Teriyaki Chicken";
-// favoriteFood = favFood1.concat(favfood2);
-// document.getElementById("food").innerHTML = favoriteFood;
-// favoriteFood.splice(0,1);
-// document.getElementById("food").innerHTML = favoriteFood;
-// favoriteFood.splice(2,1);
-// document.getElementById("food").innerHTML = favoriteFood;
 
+// const fullName = 'Ahmed Fofana';
+// document.querySelector('#name').textContent = fullName;
+
+// const currentYear = 2023;
+// document.querySelector('#years').textContent = currentYear;
+
+// const profilePicture ='images/me.jpeg';
+// document.querySelector('img').setAttribute('src', profilePicture);
+
+// const favoriteFood = ['Placali','Sauce Graine','Fish Soup'];
+// document.querySelector('#food').textContent = favoriteFood;
+
+// const anotherFavoriteFood = ['Hamburgers', 'McdDonal'];
+// favoriteFood.push(anotherFavoriteFood);
+// document.querySelector('#food').textContent = favoriteFood;
+
+// favoriteFood.shift();
+// document.querySelector('#food').textContent = favoriteFood;
+
+// favoriteFood.pop();
+// document.querySelector('#food').textContent = favoriteFood;
 
 const fullName = 'Ahmed Fofana';
 document.querySelector('#name').textContent = fullName;
@@ -40,18 +42,21 @@ document.querySelector('#name').textContent = fullName;
 const currentYear = 2023;
 document.querySelector('#years').textContent = currentYear;
 
-const profilePicture ='images/me.jpeg';
+const profilePicture = 'images/me.jpeg';
 document.querySelector('img').setAttribute('src', profilePicture);
 
-const favoriteFood = ['Placali','Sauce Graine','Fish Soup'];
-document.querySelector('#food').textContent = favoriteFood;
+let favoriteFood = ['Placali', ' Sauce Graine', ' Fish Soup', ' Sushi', ' Steak', ' Mc Donald.'];
+document.querySelector('#food').textContent = favoriteFood.join('\n');
 
-const anotherFavoriteFood = ['Hamburgers', 'McdDonal'];
+// Adding another favorite food
+const anotherFavoriteFood = ['Hamburgers', ' French Frite', ' Banana', ' Ice Cream', ' Salad'];
 favoriteFood.push(anotherFavoriteFood);
-document.querySelector('#food').textContent = favoriteFood;
 
+// Rendering the updated array with line breaks
+document.querySelector('#food').textContent = favoriteFood.join('\n');
+
+// Removing the first element of the array
 favoriteFood.shift();
-document.querySelector('#food').textContent = favoriteFood;
 
-favoriteFood.pop();
-document.querySelector('#food').textContent = favoriteFood;
+// Rendering the array again with line breaks
+document.querySelector('#food').textContent = favoriteFood.join('\n');
